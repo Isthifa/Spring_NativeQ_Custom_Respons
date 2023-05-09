@@ -14,4 +14,6 @@ public interface CustomerService{
     List<Customer> findbylastname(String cl);
     boolean updatecl(long id, String cfirstname, String clastname);
     int countids();
+
+    void deleteByfirstname(String cfirstname);
 }

@@ -29,4 +29,8 @@ public interface CustomerRepo extends JpaRepository<Customer,Long> {
     @Query(value = "select count(cid) from Customer ",nativeQuery = true)
     int countallid();
 
+    @Modifying
+    @Query(value = "delete from Customer where cfname=:cfirstname",nativeQuery = true)
+    void deletebyfirstname(@Param("cfirstname") String cfirstname);
+
 }

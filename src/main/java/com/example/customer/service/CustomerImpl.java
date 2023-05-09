@@ -61,4 +61,11 @@ public class CustomerImpl implements CustomerService{
     public int countids() {
         return customerRepo.countallid();
     }
+
+    @Override
+    @Transactional
+    public void deleteByfirstname(String cfirstname) {
+        customerRepo.deletebyfirstname(cfirstname);
+
+    }
 }

@@ -95,4 +95,10 @@ public class CustomerRest {
             return ResponseEntity.ok(nums);
         }
     }
+    @DeleteMapping("/byfirstname/{cfirstname}")
+    public String delete(@PathVariable String cfirstname)
+    {
+        customerService.deleteByfirstname(cfirstname);
+        return "deleted "+cfirstname;
+    }
 }

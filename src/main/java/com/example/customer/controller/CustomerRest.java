@@ -99,6 +99,6 @@ public class CustomerRest {
     public String delete(@PathVariable String cfirstname)
     {
         customerService.deleteByfirstname(cfirstname);
-        return "deleted "+cfirstname;
+        return "deleted successfully"+cfirstname;
     }
 }

@@ -13,4 +13,5 @@ public interface CustomerService{
     List<Customer> findbyaddress(String address);
     List<Customer> findbylastname(String cl);
     boolean updatecl(long id, String cfirstname, String clastname);
+    int countids();
 }

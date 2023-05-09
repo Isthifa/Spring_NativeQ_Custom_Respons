@@ -56,4 +56,9 @@ public class CustomerImpl implements CustomerService{
          customerRepo.updatefl(id,cfirstname,clastname);
         return false;
     }
+
+    @Override
+    public int countids() {
+        return customerRepo.countallid();
+    }
 }

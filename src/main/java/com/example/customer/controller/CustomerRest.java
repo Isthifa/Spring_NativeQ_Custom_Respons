@@ -86,4 +86,13 @@ public class CustomerRest {
         }
 
     }
+    @GetMapping("/count")
+    public ResponseEntity<Object> count() {
+        int nums = customerService.countids();
+        if (nums <= 0) {
+            return ResponseEntity.status(HttpStatus.NO_CONTENT).body("No value found");
+        } else {
+            return ResponseEntity.ok(nums);
+        }
+    }
 }

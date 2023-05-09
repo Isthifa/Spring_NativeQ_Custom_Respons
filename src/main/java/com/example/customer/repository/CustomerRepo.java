@@ -26,4 +26,7 @@ public interface CustomerRepo extends JpaRepository<Customer,Long> {
     @Query(value = "update Customer set cfname=:cfirstname,clname=:clastname where cid=:id",nativeQuery = true)
     void updatefl(@Param("id") long id, @Param("cfirstname") String cfirstname, @Param("clastname") String clastname);
 
+    @Query(value = "select count(cid) from Customer ",nativeQuery = true)
+    int countallid();
+
 }
